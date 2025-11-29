@@ -2,8 +2,9 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className="overflow-hidden text-white">Home</div>
+    <div className="min-h-[2000px] overflow-hidden">Home</div>
+
   )
 }
 
-export default Home
+export default Home;
