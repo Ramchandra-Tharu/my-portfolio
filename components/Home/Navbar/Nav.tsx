@@ -5,7 +5,10 @@ import { NavLinks } from "@/constant/constant";
 import { BiDownload } from "react-icons/bi";
 import { HiBars3BottomRight } from "react-icons/hi2";
 
-const Nav = () => {
+type Props = {
+  openNav: () => void;
+}
+const Nav = ({ openNav }: Props) => {
   const [Navbg, setNavbg] = useState(false);
 
   useEffect(() => {
@@ -23,9 +26,8 @@ const Nav = () => {
 
   return (
     <div
-      className={`transition-all ${
-        Navbg ? "bg-[#0f142ed9] shadow-md backdrop-blur-md" : "bg-transparent"
-      } duration-200 h-[12vh] z-[1000] fixed w-full`}
+      className={`transition-all ${Navbg ? "bg-[#0f142ed9] shadow-md backdrop-blur-md" : "bg-transparent"
+        } duration-200 h-[12vh] z-[1000] fixed w-full`}
     >
       <div className="flex h-full justify-between w-[90%] mx-auto items-center">
         {/* LOGO */}
@@ -58,7 +60,11 @@ const Nav = () => {
             <span>Resume</span>
           </button>
 
-          <HiBars3BottomRight className="h-8 w-8 text-white lg:hidden" />
+          <HiBars3BottomRight
+            onClick={openNav}
+            className="h-8 w-8 text-white lg:hidden"
+          />
+``
         </div>
       </div>
     </div>

@@ -1,10 +1,14 @@
 import React from 'react'
+import { HeroSection } from './Hero';
 
 const Home = () => {
   return (
-    <div className="min-h-[2000px] overflow-hidden">Home</div>
+    <div className="overflow-hidden">
+      <HeroSection />
+
+    </div>
 
   )
 }
 
-export default Home;
+export default Home;    
