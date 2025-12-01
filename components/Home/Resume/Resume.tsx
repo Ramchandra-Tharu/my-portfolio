@@ -4,23 +4,32 @@ import { FaCodepen, FaDatabase, FaReact } from 'react-icons/fa';
 
 const ResumeSection = () => {
     return (
-        <div className='pt-20 pb-20'>
-            <div className="w-[90%] sm:w-[70%] mx-auto grid grid-flow-col auto-cols-[250px] gap-10 text-white overflow-x-auto py-10">
-                {/* work */}
-                 <div className='text-2xl font-bold text-white'>
-                    <h1> My  <span className='text-cyan-400'>Education</span></h1>
-                    <ResumeCard Icon={FaCodepen} role="Full Stack Devloper" />
-                    <ResumeCard Icon={FaReact} role="Full Stack Devloper" />
-                    <ResumeCard Icon={FaDatabase} role="Full Stack Devloper" />
-
-                </div>
-                {/* education*/}
-               
-                <div>
-                </div>
-            </div>
-
+        <div className="pt-20 pb-20 ">
+<div className="w-full max-w-[1600px] mx-auto grid grid-flow-col auto-cols-[350px] gap-10 text-white overflow-x-auto py-10 justify-center">
+        
+        {/* Work Section */}
+        <div className="flex flex-col text-white">
+          <h1 className="text-xl font-bold mb-6">
+            My <span className="text-cyan-400">Work</span>
+          </h1>
+          <ResumeCard Icon={FaCodepen} role="Full Stack Developer"/>
+          <ResumeCard Icon={FaReact} role="Frontend Developer"/>
+          <ResumeCard Icon={FaDatabase} role="Database Specialist"/>
         </div>
+
+        {/* Education Section */}
+        <div className="flex flex-col text-white">
+          <h1 className="text-xl font-bold mb-6">
+            My <span className="text-cyan-400">Education</span>
+          </h1>
+          <ResumeCard Icon={FaCodepen} role="Bachelor of Computer Science" date = " 23-jun-2023" />
+          <ResumeCard Icon={FaReact} role="Master of Software Engineering" date = " 23-jun-2023" />
+          <ResumeCard Icon={FaDatabase} role="Database Certification" date = " 23-jun-2023" />
+        </div>
+
+      </div>
+    </div>
+
     )
 }
 
