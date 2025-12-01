@@ -11,7 +11,7 @@ export const HeroSection = () => {
         <div className=' relative h-screen flex items-center justify-center overflow-hidden flex-col text-white'>
             <div className='relative z-10 flex flex-col items-center'>
                 <Image
-                    src="/images/s1.png"
+                    src="public/images/srphoto.jpg"
                     alt="heroimage"
                     width={150}
                     height={150}
