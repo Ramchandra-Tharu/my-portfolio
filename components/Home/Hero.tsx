@@ -4,14 +4,16 @@ import React from 'react'
 import Image from 'next/image'
 import Typewriter from 'typewriter-effect';
 import { AiOutlineArrowRight } from "react-icons/ai";
+import ParticlesHero from './Navbar/ParticleBackground';
 
 
 export const HeroSection = () => {
     return (
         <div className=' relative h-screen flex items-center justify-center overflow-hidden flex-col text-white'>
+            <ParticlesHero/>
             <div className='relative z-10 flex flex-col items-center'>
                 <Image
-                    src="public/images/srphoto.jpg"
+                    src="/images/srphoto.jpg"
                     alt="heroimage"
                     width={150}
                     height={150}
@@ -48,4 +50,6 @@ export const HeroSection = () => {
 
         </div>
     )
+
 }
+export default HeroSection;
