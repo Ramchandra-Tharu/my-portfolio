@@ -35,14 +35,13 @@ const ClientSection = () => {
   responsive={responsive}
   infinite={true}
   autoPlay={true}
-  autoPlaySpeed={2000}
-  showDots={true}
-  arrows={false}
+  autoPlaySpeed={4000}
+  showDots={false}
 >
   <div className='text-whitetext-white w-50 h-40 bg-gray-800 text-white rounded-xl p-6 '>
     
 <div className="flex items-center space-x-3">
-    <img src="https://via.placeholder.com/50" 
+    <img src="/images/c1.png" 
          className="w-12 h-12 rounded-full object-cover" />
 
     <div>
