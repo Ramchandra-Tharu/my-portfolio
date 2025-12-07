@@ -3,6 +3,7 @@ import React from 'react'
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import ClientCardSection from './ClientCard';
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -38,57 +39,7 @@ const ClientSection = () => {
   autoPlaySpeed={4000}
   showDots={false}
 >
-  <div className='text-whitetext-white w-50 h-40 bg-gray-800 text-white rounded-xl p-6 '>
-    
-<div className="flex items-center space-x-3">
-    <img src="/images/c1.png" 
-         className="w-12 h-12 rounded-full object-cover" />
-
-    <div>
-      <h3 className="text-lg font-semibold">John Doe</h3>
-      <p className="text-sm text-gray-400">Verified User</p>
-    </div>
-  </div>
-  <p className="text-gray-300 text-sm">
-    Amazing service! The quality of work was outstanding and delivered on time.
-  </p>
-  </div>
-  <div className='text-white w-50 h-40 bg-gray-800 text-white rounded-xl p-6'><div className="flex items-center space-x-3">
-    <img src="https://via.placeholder.com/50" 
-         className="w-12 h-12 rounded-full object-cover" />
-
-    <div>
-      <h3 className="text-lg font-semibold">John Doe</h3>
-      <p className="text-sm text-gray-400">Verified User</p>
-    </div>
-  </div>
-  <p className="text-gray-300 text-sm">
-    Amazing service! The quality of work was outstanding and delivered on time.
-  </p></div>
-  <div className='text-white  text-white w-50 h-40 bg-gray-800 text-white rounded-xl p-6'><div className="flex items-center space-x-3">
-    <img src="https://via.placeholder.com/50" 
-         className="w-12 h-12 rounded-full object-cover" />
-
-    <div>
-      <h3 className="text-lg font-semibold">John Doe</h3>
-      <p className="text-sm text-gray-400">Verified User</p>
-    </div>
-  </div>
-  <p className="text-gray-300 text-sm">
-    Amazing service! The quality of work was outstanding and delivered on time.
-  </p> </div>
-  <div className='text-white text-white w-50 h-40 bg-gray-800 text-white rounded-xl p-6'><div className="flex items-center space-x-3">
-    <img src="https://via.placeholder.com/50" 
-         className="w-12 h-12 rounded-full object-cover" />
-
-    <div>
-      <h3 className="text-lg font-semibold">John Doe</h3>
-      <p className="text-sm text-gray-400">Verified User</p>
-    </div>
-  </div>
-  <p className="text-gray-300 text-sm">
-    Amazing service! The quality of work was outstanding and delivered on time.
-  </p></div>
+  <ClientCard />
 </Carousel>;
 
         </div>
