@@ -39,7 +39,32 @@ const ClientSection = () => {
   autoPlaySpeed={4000}
   showDots={false}
 >
-  <ClientCard />
+  <ClientCardSection 
+  image = "/images/c1.png"
+  name = "Sirzan"
+  role = "Web & app Dev"
+  />
+<ClientCardSection 
+  image = "/images/c2.png"
+  name = "manav"
+  role = "software dev"
+  />
+  <ClientCardSection 
+  image = "/images/c3.png"
+  name = "Ram"
+  role = "Web dev"
+  />
+  <ClientCardSection
+  image = "/images/c4.png"
+  name = "Sanjeet"
+  role = "Manager"
+  />
+  <ClientCardSection 
+  image = "/images/c5.png"
+  name = "Ravina"
+  role = "CEO"
+  />
+
 </Carousel>;
 
         </div>
