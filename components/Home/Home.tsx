@@ -5,7 +5,7 @@ import ResumeSection from './Resume/Resume';
 import ProjectSection from './Project/Project';
 import SkillSection from './Skill/Skill';
 import ClientSection from './Client/Client';
-import FooterSEction from './Footer/Footer';
+import VlogSection from './Vlog/Vlog';
 
 const Home = () => {
   return (
@@ -16,7 +16,8 @@ const Home = () => {
       <ProjectSection />
       <SkillSection />
       <ClientSection />
-      <FooterSEction />
+      <VlogSection />
+      
 
       
 

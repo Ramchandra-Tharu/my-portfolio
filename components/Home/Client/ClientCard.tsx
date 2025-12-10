@@ -1,5 +1,6 @@
 import React from 'react'
-type Props{
+import Image from 'next/image';
+type Props = {
   image: string
   name: string;
   role:string;
@@ -17,13 +18,13 @@ const ClientCardSection = ({ image, name, role }: Props) => {
       />
 
       <p className='mt-6 text-base text-gray-200 font-medium'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Id magni velit laboriosam facilis ad in voluptas alias animi quae unde dolorem corrupti
-        facere dolor repellendus corporis tempora, voluptatem nemo. Quibusdam.
+        Lorem ipsum dolor sit amet consectetur <br />
+        Id magni velit laboriosam facilis <br />
+        facere dolor repellendus corporis
       </p>
 
-      <h1>{name}</h1>
-      <p>{role}</p>
+      <h1 className='mt-6 font-bold text-xl text-cyan-200'>{name}</h1>
+      <p className='mt-1 text-white'>{role}</p>
     </div>
   );
 };
