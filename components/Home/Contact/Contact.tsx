@@ -4,7 +4,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, FaFacebook, 
 const ContactSection = () => {
     return (
         <div className="pt-16 pb-16">
-            <div className="bg-[#0f172a] w-full rounded-lg  mb-16 pt-16  pb-16">
+            <div className=" w-full rounded-lg  mb-16 pt-16  pb-16">
                 <h2 className="text-white text-4xl font-bold ml-20 mb-8">Get in Touch</h2>
 
                 <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 ml-20 gap-30">
