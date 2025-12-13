@@ -1,69 +1,137 @@
-import React from 'react'
-import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from 'react-icons/si';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import React from "react";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaGithub,
+  FaTwitter,
+} from "react-icons/fa";
 
-
-
-export const ContactSection = () => {
-
+const Contact: React.FC = () => {
   return (
-    <section className="w-full mx-auto flex flex-col md:flex-row pt-16 pb-16">
-      {/* Left Side: Social Media & Contact Info (40%) */}
-      <div className=" text-center text-white mx-auto">
+    <section
+      id="contact"
+      className="py-16 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">
+          Get in Touch
+        </h2>
 
-        <div>
-          <h1 className='text-2xl'>Let's learn next js</h1>
-          <p>Get in touch with me</p>
-        </div>
-        <div className="">
-          <FaPhoneAlt /> <h1>123-456-7890</h1>
-          <FaEnvelope /> <h1>123@123.com</h1>bhopal Madhya Pradesh, India
-          <FaMapMarkerAlt />
-        </div>
-        <div className="flex justify-center items-center gap-4 mt-4 mb-4  text-2xl  text-cyan-400 ">
-          <SiLinkedin />
-          <SiGithub />
-          <SiFacebook />
-          <SiInstagram />
-        </div>
+        <p className="text-base sm:text-lg text-center mb-12 max-w-2xl mx-auto">
+          Have a question or want to work together? Feel free to reach out!
+        </p>
 
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left */}
+          <div className="space-y-10">
+            <div>
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center lg:text-left">
+                Contact Information
+              </h3>
+
+              <div className="space-y-5">
+                <a
+                  href="tel:+11234567890"
+                  className="flex items-center justify-center lg:justify-start gap-4 hover:text-blue-600 transition"
+                >
+                  <FaPhone className="text-blue-500 text-xl sm:text-2xl" />
+                  <span className="text-sm sm:text-lg">
+                    +1 (123) 456-7890
+                  </span>
+                </a>
+
+                <a
+                  href="mailto:your.email@example.com"
+                  className="flex items-center justify-center lg:justify-start gap-4 hover:text-blue-600 transition"
+                >
+                  <FaEnvelope className="text-blue-500 text-xl sm:text-2xl" />
+                  <span className="text-sm sm:text-lg">
+                    your.email@example.com
+                  </span>
+                </a>
+
+                <div className="flex items-center justify-center lg:justify-start gap-4">
+                  <FaMapMarkerAlt className="text-blue-500 text-xl sm:text-2xl" />
+                  <span className="text-sm sm:text-lg">
+                    Your City, Country
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Icons */}
+            <div>
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center lg:text-left">
+                Connect With Me
+              </h3>
+
+              <div className="flex justify-center lg:justify-start gap-6">
+                <a
+                  href="#"
+                  className="hover:text-blue-600 transition"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedin className="text-3xl sm:text-4xl" />
+                </a>
+
+                <a
+                  href="#"
+                  className="hover:text-gray-800 dark:hover:text-white transition"
+                  aria-label="GitHub"
+                >
+                  <FaGithub className="text-3xl sm:text-4xl" />
+                </a>
+
+                <a
+                  href="#"
+                  className="hover:text-blue-400 transition"
+                  aria-label="Twitter"
+                >
+                  <FaTwitter className="text-3xl sm:text-4xl" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right - Form */}
+          <form className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-md w-full max-w-lg mx-auto">
+            <div className="mb-5">
+              <label className="block text-sm mb-2">Name</label>
+              <input
+                type="text"
+                className="w-full px-4 py-2 rounded-md border dark:bg-gray-700"
+                placeholder="Your Name"
+              />
+            </div>
+
+            <div className="mb-5">
+              <label className="block text-sm mb-2">Email</label>
+              <input
+                type="email"
+                className="w-full px-4 py-2 rounded-md border dark:bg-gray-700"
+                placeholder="you@example.com"
+              />
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm mb-2">Message</label>
+              <textarea
+                rows={4}
+                className="w-full px-4 py-2 rounded-md border dark:bg-gray-700"
+                placeholder="Your message..."
+              />
+            </div>
+
+            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-semibold transition">
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
-
-      {/* Right Side: Contact Form (40%) */}
-      <div className="w-full md:w-2/5 p-8 md:ml-auto mt-12 md:mt-0 bg-gray-800 rounded-lg shadow-lg">
-        <h2 className="text-4xl font-bold mb-6 text-white">Send a Message</h2>
-        <form className="flex flex-col space-y-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="p-3 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 text-white"
-          />
-          <input
-            type="tel"
-            placeholder="Your Phone Number"
-            className="p-3 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 text-white"
-          />
-
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="p-3 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 text-white"
-          />
-          <textarea
-            placeholder="Your Message"
-            rows={6}
-            className="p-3 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y bg-gray-900 text-white"
-          ></textarea>
-          <button
-            type="submit"
-            className="p-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300 font-semibold"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
-
     </section>
   );
-}
-export default ContactSection;
+};
+
+export default Contact;
