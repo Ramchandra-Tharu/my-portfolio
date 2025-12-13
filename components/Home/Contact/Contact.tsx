@@ -1,40 +1,32 @@
 import React from 'react'
+import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from 'react-icons/si';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
 
 
 export const ContactSection = () => {
+
   return (
-    <section className="w-4/5 mx-auto flex flex-col md:flex-row py-16">
+    <section className="w-full mx-auto flex flex-col md:flex-row pt-16 pb-16">
       {/* Left Side: Social Media & Contact Info (40%) */}
-      <div className="w-full md:w-2/5 p-4 flex flex-col justify-center">
-        <h2 className="text-5xl text-white font-bold mb-4">Let's Connect!</h2>
-        <p className="text-lg text-gray-600 mb-8">
-          I'm passionate about building amazing web experiences with React and always open to new opportunities.
-        </p>
-        <div className="flex flex-col space-y-3 mb-8">
-          <p className="text-xl flex items-center">
-            <i className="fas fa-phone-alt mr-3 text-blue-500"></i> +1 (123) 456-7890
-          </p>
-          <p className="text-xl flex items-center">
-            <i className="fas fa-envelope mr-3 text-blue-500"></i> example@email.com
-          </p>
-          <p className="text-xl flex items-center">
-            <i className="fas fa-map-marker-alt mr-3 text-blue-500"></i> 123 React St, Dev City, CA 90210
-          </p>
+      <div className=" text-center text-white mx-auto">
+
+        <div>
+          <h1 className='text-2xl'>Let's learn next js</h1>
+          <p>Get in touch with me</p>
         </div>
-        <div className="flex space-x-6">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-3xl text-blue-700 hover:text-blue-500 transition-colors duration-300">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-3xl text-gray-800 hover:text-gray-600 transition-colors duration-300">
-            <i className="fab fa-github"></i>
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-3xl text-blue-600 hover:text-blue-400 transition-colors duration-300">
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-3xl text-pink-600 hover:text-pink-400 transition-colors duration-300">
-            <i className="fab fa-instagram"></i>
-          </a>
+        <div className="">
+          <FaPhoneAlt /> <h1>123-456-7890</h1>
+          <FaEnvelope /> <h1>123@123.com</h1>bhopal Madhya Pradesh, India
+          <FaMapMarkerAlt />
         </div>
+        <div className="flex justify-center items-center gap-4 mt-4 mb-4  text-2xl  text-cyan-400 ">
+          <SiLinkedin />
+          <SiGithub />
+          <SiFacebook />
+          <SiInstagram />
+        </div>
+
       </div>
 
       {/* Right Side: Contact Form (40%) */}
