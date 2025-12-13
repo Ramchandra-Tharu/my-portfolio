@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+/* Dark grainy / star background */
+.space-bg {
+    background-color: #0b0b0b;
+    background-image:
+        radial-gradient(1px 1px at 25px 30px, rgba(255, 255, 255, 0.15), transparent),
+        radial-gradient(1px 1px at 80px 120px, rgba(255, 255, 255, 0.12), transparent),
+        radial-gradient(1px 1px at 160px 60px, rgba(255, 255, 255, 0.10), transparent),
+        radial-gradient(1px 1px at 260px 200px, rgba(255, 255, 255, 0.08), transparent),
+        radial-gradient(1px 1px at 380px 140px, rgba(255, 255, 255, 0.06), transparent);
+    background-size: 500px 500px;
+}
