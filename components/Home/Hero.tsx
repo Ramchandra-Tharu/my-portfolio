@@ -38,7 +38,7 @@ export const HeroSection = () => {
                         />
                     </span>
                 </h2>
-                <button className='mt-4 bg-blue-700 rounded-full px-4 py-4  hover:bg-blue-900 transition-all duration-300 text-lg font-medium'>
+                <button data-aos="fade-up" data-aos-delay="300" className='mt-4 bg-blue-700 rounded-full px-4 py-4  hover:bg-blue-900 transition-all duration-300 text-lg font-medium' data-aos="fade-up" data-aos-delay="400">
                     <span>see my works</span>
                     <AiOutlineArrowRight className="w-5 h-5 ml-2 inline-block" />
 

@@ -8,7 +8,7 @@ const ProjectSection = () => {
         A small selection of <span className="text-cyan-400">Projects</span>
       </h1>
 
-      <div className="px-10 py-8 max-w-full mx-auto">
+      <div className="px-10 py-8 max-w-full mx-auto" data-aos='fade-up' data-aos-anchor-placement='top-center'>
         <div className="flex flex-col sm:flex-row w-full gap-8">
           {/* Left Photo */}
           <div className="w-full sm:w-1/2 flex flex-col items-center">
@@ -27,7 +27,7 @@ const ProjectSection = () => {
           </div>
 
           {/* Right Photo */}
-          <div className="w-full sm:w-1/2 flex flex-col items-center">
+          <div className="w-full sm:w-1/2 flex flex-col items-center" data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='100'>
             <Image
               src="/images/p2.jpg"
               alt="Photo 2"
@@ -45,7 +45,7 @@ const ProjectSection = () => {
 
         <div className="flex flex-col sm:flex-row w-full gap-8 mt-20">
           {/* Left Photo */}
-          <div className="w-full sm:w-1/2 flex flex-col items-center">
+          <div className="w-full sm:w-1/2 flex flex-col items-center" data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='200'>
             <Image
               src="/images/p3.jpg"
               alt="Photo 1"
@@ -60,7 +60,7 @@ const ProjectSection = () => {
           </div>
 
           {/* Right Photo */}
-          <div className=" w-full sm:w-1/2 flex flex-col items-center">
+          <div className=" w-full sm:w-1/2 flex flex-col items-center" data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='300'>
             <Image
               src="/images/p4.jpg"
               alt="Photo 2"

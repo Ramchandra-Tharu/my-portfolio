@@ -4,10 +4,12 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, FaFacebook, 
 const ContactSection = () => {
     return (
         <div className="pt-16 pb-16">
-            <div className=" w-full rounded-lg  mb-16 pt-16  pb-16">
+            <div className="bg-[#0f172a] w-full rounded-lg  mb-16 pt-16  pb-16">
                 <h2 className="text-white text-4xl font-bold ml-20 mb-8">Get in Touch</h2>
 
-                <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 ml-20 gap-30">
+                <div
+                    data-aos='zoom-in' data-aos-anchor-placement='top-center'
+                    className=" mx-auto grid grid-cols-1 md:grid-cols-2 ml-20 gap-30">
                     {/* Left Side: Contact Form */}
                     <div>
                         <form className="space-y-6">
@@ -49,7 +51,9 @@ const ContactSection = () => {
                     </div>
 
                     {/* Right Side: Contact Info & Social Media */}
-                    <div className="flex flex-col justify-between">
+                    <div
+                        data-aos='zoom-out' data-aos-anchor-placement='top-center'
+                        className="flex flex-col justify-between">
                         {/* Contact Info */}
                         <div className="space-y-6">
                             <div className="flex items-start space-x-4">
