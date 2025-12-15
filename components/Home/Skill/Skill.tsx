@@ -57,7 +57,7 @@ const SkillSection = () => {
       <h1 className='text-white text-bold text-center text-2xl sm:text-4xl xl:text-5xl font-bold'>
         My <span className='text-cyan-200'> Skills</span>
       </h1>
-      <div className='justify-center mt-16  gap-6 flex flex-wrap'>
+      <div id='SkillsSection' className='justify-center mt-16  gap-6 flex flex-wrap'>
         {
           skills.map((skill, i) => {
             return (

@@ -4,7 +4,7 @@ import VlogCard from './VlogCard';
 const VlogSection = () => {
   return (
     <div className='pb-16 pt-16'>
-      <h1 className='text-center text-4xl font-bold text-white'>
+      <h1 id='VlogSection' className='text-center text-4xl font-bold text-white'>
         My latest
         <span className='text-cyan-200'> Blogs</span>
       </h1>

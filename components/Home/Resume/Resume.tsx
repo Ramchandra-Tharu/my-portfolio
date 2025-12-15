@@ -4,7 +4,7 @@ import { FaCodepen, FaDatabase, FaReact } from 'react-icons/fa';
 
 const ResumeSection = () => {
   return (
-    <div className="pt-20 pb-20 ">
+    <div id='ResumeSection' className="pt-20 pb-20 ">
       <div className="w-full max-w-[1600px] mx-auto grid grid-flow-col auto-cols-[350px] gap-10 text-white overflow-x-auto py-10 justify-center">
 
         {/* Work Section */}
