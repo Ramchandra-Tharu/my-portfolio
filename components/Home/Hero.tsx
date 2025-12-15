@@ -15,12 +15,13 @@ export const HeroSection = () => {
         >
             <ParticlesHero />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 flex flex-col-reverse md:flex-row items-between justify-between gap-10 md:gap-24">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 flex flex-col-reverse md:flex-row items-center  justify-between gap-10 md:gap-24">
 
                 {/* LEFT SIDE */}
                 <div className="flex flex-col items-left md:items-start text-center md:text-left">
 
                     <h1
+
                         data-aos="fade-up"
                         className="text-2xl sm:text-4xl mt-6 font-bold tracking-wide"
                     >
@@ -75,10 +76,11 @@ export const HeroSection = () => {
 
                 {/* RIGHT SIDE IMAGE */}
                 <Image
-                    src="/images/srphoto.jpg"
+                    src="/images/sr.jpg"
                     alt="heroimage"
-                    width={180}
-                    height={180}
+                    width={400}
+                    style={{ marginLeft: '40px' }}
+                    height={300}
                     className="rounded-full border-4 border-black"
                     data-aos="fade-up"
                 />
