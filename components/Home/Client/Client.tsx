@@ -25,49 +25,49 @@ const responsive = {
 
 const ClientSection = () => {
   return (
-    <div className='pb-16 pt-16'>
-        <h1 className='text-center text-4xl font-bold text-white'>
-            Kind words from satisfied <br /> 
-            <span className='text-cyan-200'> Clients</span>
-        </h1>
-        <div className='mt-16 w-[80%] mx-auto'>
+    <div id='ClientSection' className='pb-16 pt-16'>
+      <h1 className='text-center text-4xl font-bold text-white'>
+        Kind words from satisfied <br />
+        <span className='text-cyan-200'> Clients</span>
+      </h1>
+      <div className='mt-16 w-[80%] mx-auto'>
 
-<Carousel
-  responsive={responsive}
-  infinite={true}
-  autoPlay={true}
-  autoPlaySpeed={4000}
-  showDots={false}
->
-  <ClientCardSection 
-  image = "/images/c1.png"
-  name = "Sirzan"
-  role = "Web & app Dev"
-  />
-<ClientCardSection 
-  image = "/images/c2.png"
-  name = "manav"
-  role = "software dev"
-  />
-  <ClientCardSection 
-  image = "/images/c3.png"
-  name = "Ram"
-  role = "Web dev"
-  />
-  <ClientCardSection
-  image = "/images/c4.png"
-  name = "Sanjeet"
-  role = "Manager"
-  />
-  <ClientCardSection 
-  image = "/images/c5.png"
-  name = "Ravina"
-  role = "CEO"
-  />
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={4000}
+          showDots={false}
+        >
+          <ClientCardSection
+            image="/images/c1.png"
+            name="Sirzan"
+            role="Web & app Dev"
+          />
+          <ClientCardSection
+            image="/images/c2.png"
+            name="manav"
+            role="software dev"
+          />
+          <ClientCardSection
+            image="/images/c3.png"
+            name="Ram"
+            role="Web dev"
+          />
+          <ClientCardSection
+            image="/images/c4.png"
+            name="Sanjeet"
+            role="Manager"
+          />
+          <ClientCardSection
+            image="/images/c5.png"
+            name="Ravina"
+            role="CEO"
+          />
 
-</Carousel>
+        </Carousel>
 
-        </div>
+      </div>
 
     </div>
   )

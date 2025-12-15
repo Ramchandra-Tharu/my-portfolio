@@ -9,7 +9,7 @@ import ParticlesHero from './Navbar/ParticleBackground';
 
 export const HeroSection = () => {
     return (
-        <div className=' relative h-screen flex items-center justify-center overflow-hidden flex-col text-white'>
+        <div id='HeroSection' className=' relative h-screen flex items-center justify-center overflow-hidden flex-col text-white'>
             <ParticlesHero />
             <div className='relative z-10 flex flex-col items-center'>
                 <Image

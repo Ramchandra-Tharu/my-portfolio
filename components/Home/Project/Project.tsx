@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const ProjectSection = () => {
   return (
-    <div className="pt-16 pb-16">
+    <div id='ProjectsSection' className="pt-16 pb-16">
       <h1 className='text-white text-center bt-10 text-2xl'>
         A small selection of <span className="text-cyan-400">Projects</span>
       </h1>
