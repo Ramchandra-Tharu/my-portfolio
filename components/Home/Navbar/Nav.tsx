@@ -46,7 +46,7 @@ const Nav = ({ openNav }: Props) => {
         </Link>
 
         {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4">
           {NavLinks.map((link) => (
             <Link
               key={link.id}

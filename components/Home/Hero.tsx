@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import Typewriter from 'typewriter-effect';
 import { AiOutlineArrowRight } from "react-icons/ai";
-import ParticlesHero from './Navbar/ParticleBackground';
+
 import { BiDownload } from 'react-icons/bi';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -15,9 +15,7 @@ export const HeroSection = () => {
             id="Home"
             className="relative h-screen mx-auto flex items-center justify-center overflow-hidden flex-col text-white"
         >
-            <div className="absolute inset-0 z-0">
-                <ParticlesHero />
-            </div>
+
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 flex flex-col-reverse md:flex-row items-center  justify-between gap-10 md:gap-24">
 
