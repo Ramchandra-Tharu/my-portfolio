@@ -1,112 +1,106 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, FaFacebook, FaInstagram, FaTwitter, FaThumbsUp } from "react-icons/fa";
-
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const ContactSection = () => {
     return (
-        <div className="pt-16 pb-16">
-            <div id='ContactSection' className=" w-full rounded-lg  mb-16 pt-16  pb-16">
-                <h2 className="text-white text-4xl font-bold ml-20 mb-8">Get in Touch</h2>
+        <div className="pt-20 pb-20">
+            <div id='ContactSection' className="max-w-7xl mx-auto px-6 md:px-12">
+                <h1 className=' text-3xl md:text-4xl font-bold text-white mb-16'>
+                    Get in <span className='text-cyan-400'>Touch</span>
+                </h1>
 
-                <div
-                    data-aos='zoom-in' data-aos-anchor-placement='top-center'
-                    className=" mx-auto grid grid-cols-1 md:grid-cols-2 ml-20 gap-30">
-                    {/* Left Side: Contact Form */}
-                    <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+                    {/* Left Side: Form */}
+                    <div data-aos='fade-right'>
                         <form className="space-y-6">
-                            <div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <input
                                     type="text"
                                     placeholder="Name"
-                                    className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white pb-2"
+                                    className="w-full bg-transparent border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 hover:border-cyan-500 transition-all"
                                 />
-                            </div>
-                            <div>
                                 <input
-                                    type="email"
-                                    placeholder="Email"
-                                    className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white pb-2"
-                                />
-                            </div>
-                            <div>
-                                <input
-                                    type="tel"
+                                    type="text"
                                     placeholder="Phone"
-                                    className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white pb-2"
+                                    className="w-full bg-transparent border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 hover:border-cyan-500 transition-all"
                                 />
                             </div>
-                            <div>
-                                <textarea
-                                    placeholder="Message"
-                                    rows={5}
-                                    className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white pb-2 resize-none"
-                                ></textarea>
-                            </div>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                className="w-full bg-transparent border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 hover:border-cyan-500 transition-all"
+                            />
+                            <textarea
+                                placeholder="Message"
+                                rows={6}
+                                className="w-full bg-transparent border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 hover:border-cyan-500 transition-all resize-none"
+                            ></textarea>
                             <button
                                 type="submit"
-                                className="bg-[#F4A261] text-[#1f1f1f] px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors"
+                                className="w-full bg-cyan-600 text-white px-6 py-4 rounded-lg font-bold hover:bg-cyan-500 transition-colors duration-300 shadow-lg shadow-cyan-500/20"
                             >
                                 Send Message
                             </button>
                         </form>
                     </div>
 
-                    {/* Right Side: Contact Info & Social Media */}
-                    <div
-                        data-aos='zoom-out' data-aos-anchor-placement='top-center'
-                        className="flex flex-col justify-between">
-                        {/* Contact Info */}
+                    {/* Right Side: Contact Info */}
+                    <div data-aos='fade-left' className="space-y-8">
+                        <p className="text-gray-400 leading-relaxed text-lg">
+                            I'm always open to discussing web development work or partnership opportunities.
+                        </p>
+
                         <div className="space-y-6">
-                            <div className="flex items-start space-x-4">
-                                {/* Assuming react-icons are available, e.g., import { FaMapMarkerAlt } from 'react-icons/fa'; */}
-                                <div className="text-white text-2xl"> <FaMapMarkerAlt className="text-blue-500 text-lg" /></div> {/* Placeholder for icon */}
+                            <div className="flex items-center space-x-4 group">
+                                <div className="p-4 bg-gray-900 rounded-full border border-gray-800 group-hover:border-cyan-500/50 group-hover:bg-cyan-500/10 transition-all duration-300">
+                                    <FaMapMarkerAlt className="text-cyan-500 text-xl" />
+                                </div>
                                 <div>
-                                    <h3 className="text-white text-lg font-semibold">Address</h3>
-                                    <p className="text-gray-300 text-sm">Mandideep, Raisen Madhya Pradesh India </p>
-                                </div>
-                            </div>
-                            <div className="flex items-start space-x-4">
-                                <div className="text-white text-2xl"> <FaPhone className="text-blue-500 text-lg" /></div> {/* Placeholder for icon */}
-                                <div>
-                                    <h3 className="text-white text-lg font-semibold">Phone</h3>
-                                    <p className="text-gray-300 text-sm"> (+91) 7778421392</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start space-x-4">
-                                <div className="text-white text-2xl"> <FaEnvelope className="text-blue-500 text-lg" /></div> {/* Placeholder for icon */}
-                                <div>
-                                    <h3 className="text-white text-lg font-semibold">E mail</h3>
-                                    <p className="text-gray-300 text-sm">ramchandrachaudhary2003@gmail.com</p>
-                                </div>
-                            </div>
-                            <div className="mt-12  md:mt-0">
-                                <div className="flex items-start space-x-4">
-                                    <div className="text-white text-2xl"> <FaThumbsUp className="text-blue-500 text-xl" /></div> {/* Placeholder for icon */}
-                                    <div>
-                                        <h3 className="text-white text-lg font-semibold">Follow Me</h3>
-                                    </div>
-                                </div>
-                                <div className="flex  ml-8 flex-wrap gap-2">
-                                    <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
-                                        <div className="text-2xl"><FaLinkedin /></div> {/* Placeholder for icon */}
-                                    </a>
-                                    <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
-                                        <div className="text-2xl"><FaGithub /></div> {/* Placeholder for icon */}
-                                    </a>
-                                    <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
-                                        <div className="text-2xl"><FaLinkedin /></div> {/* Placeholder for icon */}
-                                    </a>
-                                    <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
-                                        <div className="text-2xl"><FaInstagram /></div> {/* Placeholder for icon */}
-                                    </a>
-                                    <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
-                                        <div className="text-2xl"><FaTwitter /></div> {/* Placeholder for icon */}
-                                    </a>
+                                    <h3 className="text-white text-lg font-semibold group-hover:text-cyan-400 transition-colors">Address</h3>
+                                    <p className="text-gray-400">Mandideep, Raisen Madhya Pradesh, India</p>
                                 </div>
                             </div>
 
+                            <div className="flex items-center space-x-4 group">
+                                <div className="p-4 bg-gray-900 rounded-full border border-gray-800 group-hover:border-cyan-500/50 group-hover:bg-cyan-500/10 transition-all duration-300">
+                                    <FaPhone className="text-cyan-500 text-xl" />
+                                </div>
+                                <div>
+                                    <h3 className="text-white text-lg font-semibold group-hover:text-cyan-400 transition-colors">Phone</h3>
+                                    <p className="text-gray-400">(+91) 7778421392</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center space-x-4 group">
+                                <div className="p-4 bg-gray-900 rounded-full border border-gray-800 group-hover:border-cyan-500/50 group-hover:bg-cyan-500/10 transition-all duration-300">
+                                    <FaEnvelope className="text-cyan-500 text-xl" />
+                                </div>
+                                <div>
+                                    <h3 className="text-white text-lg font-semibold group-hover:text-cyan-400 transition-colors">Email</h3>
+                                    <p className="text-gray-400">ramchandrachaudhary2003@gmail.com</p>
+                                </div>
+                            </div>
                         </div>
 
-
+                        <div className="pt-8">
+                            <h3 className="text-white text-lg font-semibold mb-4">Follow Me</h3>
+                            <div className="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/ramachandra-tharu/" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-900 rounded-full border border-gray-800 hover:border-cyan-500 hover:bg-cyan-500/10 hover:text-cyan-400 text-gray-400 transition-all duration-300">
+                                    <FaLinkedin size={20} />
+                                </a>
+                                <a href="https://github.com/Ramchandra-Tharu" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-900 rounded-full border border-gray-800 hover:border-cyan-500 hover:bg-cyan-500/10 hover:text-cyan-400 text-gray-400 transition-all duration-300">
+                                    <FaGithub size={20} />
+                                </a>
+                                <a href="#" className="p-3 bg-gray-900 rounded-full border border-gray-800 hover:border-cyan-500 hover:bg-cyan-500/10 hover:text-cyan-400 text-gray-400 transition-all duration-300">
+                                    <FaFacebook size={20} />
+                                </a>
+                                <a href="#" className="p-3 bg-gray-900 rounded-full border border-gray-800 hover:border-cyan-500 hover:bg-cyan-500/10 hover:text-cyan-400 text-gray-400 transition-all duration-300">
+                                    <FaInstagram size={20} />
+                                </a>
+                                <a href="#" className="p-3 bg-gray-900 rounded-full border border-gray-800 hover:border-cyan-500 hover:bg-cyan-500/10 hover:text-cyan-400 text-gray-400 transition-all duration-300">
+                                    <FaTwitter size={20} />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

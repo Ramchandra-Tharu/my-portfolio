@@ -11,6 +11,9 @@ import ContactSection from './Contact/Contact';
 import FooterSection from './Footer/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ParticlesHero from './Navbar/ParticleBackground';
+import SectionParticles from './Common/SectionParticles';
+
 const Home = () => {
   useEffect(() => {
     const initAOS = async () => {
@@ -27,21 +30,26 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       <HeroSection />
-      <ServicesSection />
-      <ResumeSection />
-      <ProjectSection />
-      <SkillSection />
-      <ClientSection />
-      <VlogSection />
-      <ContactSection />
+
+      {/* Body Sections with Star Particles */}
+      <div className="relative">
+        <div className="absolute inset-0 z-0">
+          <SectionParticles />
+        </div>
+        <div className="relative z-10">
+          <ServicesSection />
+          <ResumeSection />
+          <ProjectSection />
+          <SkillSection />
+          <ClientSection />
+          <VlogSection />
+          <ContactSection />
+        </div>
+      </div>
+
       <FooterSection />
-
-
-
-
     </div>
-
   )
 }
 
-export default Home;    
+export default Home;
