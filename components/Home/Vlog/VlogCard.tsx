@@ -7,13 +7,16 @@ type Props = {
     date: string;
     title: string;
     tags: string[];
+    description: string;
+    isOpen: boolean;
+    toggle: () => void;
 }
 
-const VlogCard = ({ image, date, title, tags }: Props) => {
+const VlogCard = ({ image, date, title, tags, description, isOpen, toggle }: Props) => {
     return (
         <div className='bg-gray-900 rounded-xl border border-gray-800 overflow-hidden group hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-cyan-500/10 cursor-pointer h-full flex flex-col'>
             {/* Image Container */}
-            <div className="relative h-48 w-full overflow-hidden">
+            <div className="relative h-48 w-full overflow-hidden shrink-0">
                 <div className="absolute inset-0 bg-blue-900/20 group-hover:bg-transparent transition-colors z-10" />
                 <Image
                     src={image}
@@ -47,9 +50,21 @@ const VlogCard = ({ image, date, title, tags }: Props) => {
                         ))}
                     </div>
 
-                    <div className="flex items-center gap-2 text-cyan-400 text-sm font-bold group-hover:translate-x-2 transition-transform duration-300">
-                        Read More <FaArrowRight size={12} />
+                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96 opacity-100 mb-4' : 'max-h-0 opacity-0'}`}>
+                        <p className="text-gray-300 text-sm leading-relaxed border-t border-gray-800 pt-4">
+                            {description}
+                        </p>
                     </div>
+
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            toggle();
+                        }}
+                        className="flex items-center gap-2 text-cyan-400 text-sm font-bold group-hover:translate-x-2 transition-transform duration-300 hover:text-cyan-300"
+                    >
+                        {isOpen ? 'Read Less' : 'Read More'} <FaArrowRight size={12} className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                    </button>
                 </div>
             </div>
         </div>

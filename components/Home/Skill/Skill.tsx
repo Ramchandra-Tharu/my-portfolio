@@ -5,8 +5,6 @@ import {
   SiNextdotjs,
   SiReact,
   SiFlutter,
-  SiHtml5,
-  SiCss3,
   SiNodedotjs,
   SiMongodb,
   SiPostgresql,
