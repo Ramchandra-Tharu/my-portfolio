@@ -48,7 +48,7 @@ const ProjectSection = () => {
 const projectData = [
   {
     id: 1,
-    image: "/images/p1.jpg",
+    image: "/images/p1.png",
     description: "A clean white SaaS website showing a user-onboarding platform with a dashboard preview. It focuses on helping teams onboard users faster.",
     techStack: ["Next.js", "React", "Tailwind CSS", "Framer Motion"]
   },
