@@ -41,7 +41,7 @@ const Nav = ({ openNav }: Props) => {
             />
           </div>
           <span className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-            S.R<span className="text-cyan-400 group-hover:text-white">.</span>
+            S.<span className="text-cyan-400 group-hover:text-white">R</span>
           </span>
         </Link>
 
