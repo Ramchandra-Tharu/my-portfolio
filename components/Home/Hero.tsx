@@ -57,7 +57,7 @@ export const HeroSection = () => {
                                         "Frontend Dev",
                                         "Fullstack Dev",
                                         "UI/UX Designer",
-                                        "Content Creator",
+                                        " Android App Dev"
                                     ],
                                     autoStart: true,
                                     loop: true,
