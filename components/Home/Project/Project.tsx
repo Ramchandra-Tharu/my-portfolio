@@ -49,8 +49,8 @@ const projectData = [
   {
     id: 1,
     image: "/images/p1.png",
-    description: "A clean white SaaS website showing a user-onboarding platform with a dashboard preview. It focuses on helping teams onboard users faster.",
-    techStack: ["Next.js", "React", "Tailwind CSS", "Framer Motion"]
+    description: "FitFlow is a fitness platform that helps users track workouts, get personalized fitness and nutrition guidance, and follow guided exercise or walking plans.",
+    techStack: ["Next.js", , "Tailwind CSS", "Framer Motion"]
   },
   {
     id: 2,
