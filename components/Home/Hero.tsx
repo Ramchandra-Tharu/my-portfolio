@@ -7,6 +7,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 import { BiDownload } from 'react-icons/bi';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import resumePdf from './Resume/resume.pdf';
 
 
 export const HeroSection = () => {
@@ -69,7 +70,7 @@ export const HeroSection = () => {
                     </h2>
                     <div className="flex items-center mt-6">
                         <a
-                            href="/resume.pdf"
+                            href={resumePdf}
                             download="Ramchandra_Tharu_Resume.pdf"
                             data-aos="fade-up"
                             data-aos-delay="300"
