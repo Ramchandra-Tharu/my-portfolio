@@ -126,7 +126,7 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-white text-lg font-semibold group-hover:text-cyan-400 transition-colors">Address</h3>
-                                    <p className="text-gray-400">Mandideep, ram Raisen Madhya Pradesh, India</p>
+                                    <p className="text-gray-400">Mandideep, Raisen Madhya Pradesh, India</p>
                                 </div>
                             </div>
 
