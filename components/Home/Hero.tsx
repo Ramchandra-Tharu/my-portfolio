@@ -68,15 +68,22 @@ export const HeroSection = () => {
                             />
                         </span>
                     </h2>
+<<<<<<< HEAD
                     <div className="flex items-center mt-8">
                         <button
+=======
+                    <div className="flex items-center mt-6">
+                        <a
+                            href="/resume.pdf"
+                            download="Ramchandra_Tharu_Resume.pdf"
+>>>>>>> 49cca9e84af472051fed12f49dd26fe3b88f9c43
                             data-aos="fade-up"
                             data-aos-delay="300"
                             className="mr-6 bg-[#D0FF71] text-black text-sm rounded-full px-8 py-3 hover:bg-white transition-all duration-300 font-bold uppercase tracking-wider flex items-center shadow-[0_0_10px_rgba(208,255,113,0.3)]"
                         >
                             <span>Resume</span>
                             <BiDownload className="w-5 h-5 ml-2 inline-block" />
-                        </button>
+                        </a>
                         <a
                             href="https://www.linkedin.com/in/ramachandra-tharu/"
                             target="_blank"
