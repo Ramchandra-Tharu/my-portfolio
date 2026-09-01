@@ -7,6 +7,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 import { BiDownload } from 'react-icons/bi';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import ResponsiveNav from './Navbar/ResponsiveNav';
 
 
 export const HeroSection = () => {
@@ -67,11 +68,11 @@ export const HeroSection = () => {
                             />
                         </span>
                     </h2>
-                    <div className="flex items-center mt-6">
+                    <div className="flex items-center mt-8">
                         <button
                             data-aos="fade-up"
                             data-aos-delay="300"
-                            className="mr-4 bg-blue-700 text-sm rounded-xl px-6 py-4 hover:bg-blue-900 transition-all duration-300 text-lg font-medium flex items-center"
+                            className="mr-6 bg-[#D0FF71] text-black text-sm rounded-full px-8 py-3 hover:bg-white transition-all duration-300 font-bold uppercase tracking-wider flex items-center shadow-[0_0_10px_rgba(208,255,113,0.3)]"
                         >
                             <span>Resume</span>
                             <BiDownload className="w-5 h-5 ml-2 inline-block" />
@@ -82,9 +83,9 @@ export const HeroSection = () => {
                             rel="noopener noreferrer"
                             data-aos="fade-up"
                             data-aos-delay="350"
-                            className="text-blue-700 hover:text-cyan-400 transition-colors duration-300 mx-2"
+                            className="text-[#D0FF71] hover:text-white transition-colors duration-300 mx-2"
                         >
-                            <FaLinkedin className="w-5 h-5 ml-2 inline-block" />
+                            <FaLinkedin className="w-7 h-7 inline-block" />
                         </a>
                         <a
                             href="https://github.com/Ramchandra-Tharu"
@@ -92,9 +93,9 @@ export const HeroSection = () => {
                             rel="noopener noreferrer"
                             data-aos="fade-up"
                             data-aos-delay="400"
-                            className="text-blue-700  hover:text-cyan-400 transition-colors duration-300 mx-2"
+                            className="text-[#D0FF71]  hover:text-white transition-colors duration-300 mx-2"
                         >
-                            <FaGithub className="w-5 h-5 ml-2 inline-block" />
+                            <FaGithub className="w-7 h-7 inline-block" />
                         </a>
                     </div>
 

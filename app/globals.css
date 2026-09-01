@@ -1,8 +1,29 @@
 @import "tailwindcss";
 
-/* Dark grainy / star background */
+@theme {
+  --color-portavia-bg: #1A1A1B;
+  --color-portavia-green: #D0FF71;
+  --color-portavia-indigo: #5E67E6;
+  --color-portavia-gray: #B5B5B5;
+
+  --font-display: var(--font-antonio), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-portavia-bg);
+  color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Dark grainy / star background - Adjusted to blend with new theme if needed, or keeping as is but ensuring bg color matches */
 .space-bg {
-    background-color: #0b0b0b;
+    background-color: var(--color-portavia-bg);
     background-image:
         radial-gradient(1px 1px at 25px 30px, rgba(255, 255, 255, 0.15), transparent),
         radial-gradient(1px 1px at 80px 120px, rgba(255, 255, 255, 0.12), transparent),

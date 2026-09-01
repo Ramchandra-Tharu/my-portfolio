@@ -11,27 +11,13 @@ type Props = {
 }
 
 const Nav = ({ openNav }: Props) => {
-  const [navBg, setNavBg] = useState(false);
-
-  useEffect(() => {
-    const handler = () => {
-      if (window.scrollY >= 50) setNavBg(true);
-      else setNavBg(false);
-    };
-
-    window.addEventListener("scroll", handler);
-    return () => window.removeEventListener("scroll", handler);
-  }, []);
-
   return (
-    <div
-      className={`fixed w-full z-[1000] transition-all duration-300 ${navBg ? "bg-[#050505]/80 py-4 shadow-lg backdrop-blur-md border-b border-gray-800" : "bg-transparent py-6"
-        }`}
-    >
-      <div className="flex justify-between items-center w-[90%] xl:w-[80%] mx-auto">
+    <>
+      {/* Top Bar: Logo & Action Button */}
+      <div className="fixed top-8 left-0 w-full z-[1000] px-6 md:px-12 flex justify-between items-center pointer-events-none">
         {/* LOGO */}
-        <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-          <div className="w-10 h-10 rounded-full border-2 border-cyan-500 overflow-hidden relative group-hover:border-white transition-colors">
+        <Link href="/" className="flex items-center gap-2 group cursor-pointer pointer-events-auto">
+          <div className="w-10 h-10 rounded-full border-2 border-[#D0FF71] overflow-hidden relative group-hover:border-white transition-colors">
             <Image
               src="/images/logos.jpg"
               alt="logo"
@@ -40,30 +26,15 @@ const Nav = ({ openNav }: Props) => {
               unoptimized
             />
           </div>
-          <span className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-            S.<span className="text-cyan-400 group-hover:text-white">R</span>
+          <span className="text-2xl font-bold text-white group-hover:text-[#D0FF71] transition-colors font-display">
+            S.<span className="text-[#D0FF71] group-hover:text-white">R</span>
           </span>
         </Link>
 
-        {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-4">
-          {NavLinks.map((link) => (
-            <Link
-              key={link.id}
-              href={link.url}
-              className="nav-link text-gray-300 font-medium text-sm tracking-wide uppercase hover:text-cyan-400 transition-all duration-300 relative group"
-            >
-              {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300" />
-            </Link>
-          ))}
-        </div>
-
-        {/* Right Side Buttons */}
-        <div className="flex items-center gap-4">
-
+        {/* Right Side Buttons (Top Right) */}
+        <div className="flex items-center gap-4 pointer-events-auto">
           <Link href="#ContactSection">
-            <button className="hidden sm:block px-8 py-2.5 rounded-full border border-cyan-500 text-cyan-400 font-bold text-sm hover:bg-cyan-500 hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.2)] hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+            <button className="hidden sm:block px-8 py-2.5 rounded-full border border-[#D0FF71] text-[#D0FF71] font-bold text-sm hover:bg-[#D0FF71] hover:text-black transition-all duration-300 shadow-[0_0_10px_rgba(208,255,113,0.2)] hover:shadow-[0_0_20px_rgba(208,255,113,0.4)] uppercase tracking-wider">
               Let's Talk
             </button>
           </Link>
@@ -71,12 +42,28 @@ const Nav = ({ openNav }: Props) => {
           {/* Mobile Menu Toggle */}
           <div onClick={openNav} className="lg:hidden cursor-pointer">
             <HiBars3BottomRight
-              className="w-8 h-8 text-white hover:text-cyan-400 transition-colors"
+              className="w-8 h-8 text-white hover:text-[#D0FF71] transition-colors"
             />
           </div>
         </div>
       </div>
-    </div >
+
+      {/* Bottom Bar: Navigation Links (Center Bottom) */}
+      <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[1000] hidden lg:block">
+        <div className="flex items-center gap-6 border border-white/20 bg-black/30 backdrop-blur-md px-10 py-4 rounded-full shadow-lg">
+          {NavLinks.map((link) => (
+            <Link
+              key={link.id}
+              href={link.url}
+              className="nav-link text-white/90 font-medium text-sm tracking-wide uppercase hover:text-[#D0FF71] transition-all duration-300 relative group"
+            >
+              {link.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#D0FF71] group-hover:w-full transition-all duration-300" />
+            </Link>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 

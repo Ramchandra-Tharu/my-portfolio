@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Antonio } from "next/font/google"; // Added Antonio
 import "./globals.css";
 import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 
-const font = Inter({
+const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
+const antonio = Antonio({
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-antonio",
+});
 
 export const metadata: Metadata = {
   title: "Sirzan-Chaudhary",
@@ -22,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} antialiased bg-[#0d0d1f]`}
+        className={`${inter.variable} ${antonio.variable} antialiased bg-[#1A1A1B] text-white`}
         suppressHydrationWarning
       >
         <ResponsiveNav />
