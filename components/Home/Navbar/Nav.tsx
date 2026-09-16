@@ -40,11 +40,14 @@ const Nav = ({ openNav }: Props) => {
           </Link>
 
           {/* Mobile Menu Toggle */}
-          <div onClick={openNav} className="lg:hidden cursor-pointer">
-            <HiBars3BottomRight
-              className="w-8 h-8 text-white hover:text-[#D0FF71] transition-colors"
-            />
-          </div>
+          <button
+            type="button"
+            onClick={openNav}
+            aria-label="Open menu"
+            className="lg:hidden w-11 h-11 flex items-center justify-center rounded-full bg-gray-900/80 border border-gray-800 text-white hover:text-cyan-400 hover:border-cyan-400/50 active:scale-95 transition-all duration-200 cursor-pointer"
+          >
+            <HiBars3BottomRight className="w-6 h-6" />
+          </button>
         </div>
       </div>
 

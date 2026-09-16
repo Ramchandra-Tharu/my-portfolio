@@ -15,9 +15,8 @@ type Props = {
 const VlogCard = ({ image, date, title, tags, description, isOpen, toggle }: Props) => {
     return (
         <div className='bg-gray-900 rounded-xl border border-gray-800 overflow-hidden group hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-cyan-500/10 cursor-pointer h-full flex flex-col'>
-            {/* Image Container */}
             <div className="relative h-48 w-full overflow-hidden shrink-0">
-                <div className="absolute inset-0 bg-blue-900/20 group-hover:bg-transparent transition-colors z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent group-hover:opacity-60 transition-opacity z-10" />
                 <Image
                     src={image}
                     alt={title}

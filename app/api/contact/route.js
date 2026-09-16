@@ -1,24 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-// Create Nodemailer transporter
-const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-    },
-});
-
-// Verify connection configuration
-transporter.verify(function (error, success) {
-    if (error) {
-        console.error("Transporter Verification Error:", error);
-    } else {
-        console.log("Server is ready to take our messages");
-    }
-});
-
 export async function POST(req) {
     try {
         const { name, email, phone, message } = await req.json();
@@ -31,6 +13,23 @@ export async function POST(req) {
                 message: "Please provide all required fields (name, email, message)." 
             }, { status: 400 });
         }
+
+        if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+            console.warn("EMAIL_USER or EMAIL_PASS environment variables are missing.");
+            return NextResponse.json({
+                success: false,
+                message: "Email service is currently unconfigured. Please set EMAIL_USER and EMAIL_PASS environment variables."
+            }, { status: 500 });
+        }
+
+        // Create Nodemailer transporter dynamically
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
+        });
 
         const mailOptions = {
             from: `"${name}" <${process.env.EMAIL_USER}>`, // Best practice for Gmail

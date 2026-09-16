@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-3import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, FaFacebook, FaInstagram, FaTwitter, FaPaperPlane } from "react-icons/fa";
-=======
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useState } from "react";
->>>>>>> 49cca9e84af472051fed12f49dd26fe3b88f9c43
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, FaFacebook, FaInstagram, FaTwitter, FaPaperPlane } from "react-icons/fa";
 
 const ContactSection = () => {
     const [formData, setFormData] = useState({
@@ -35,12 +31,9 @@ const ContactSection = () => {
             });
 
             if (response.ok) {
-                // Add explicit 2-second delay before showing success
                 setTimeout(() => {
                     setStatus('success');
                     setFormData({ name: '', phone: '', email: '', message: '' });
-
-                    // Clear success message after another 3 seconds
                     setTimeout(() => setStatus(null), 3000);
                 }, 2000);
             } else {
@@ -51,6 +44,7 @@ const ContactSection = () => {
             setStatus('error');
         }
     };
+
     return (
         <div className="py-20 relative z-10 mt-12">
             <div id='ContactSection' className="max-w-7xl mx-auto px-6 md:px-12">
@@ -59,7 +53,6 @@ const ContactSection = () => {
                     <div className="absolute -top-24 -right-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
                     <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 
-<<<<<<< HEAD
                     <div className="flex flex-col md:flex-row justify-between items-start mb-14 gap-8 relative z-10">
                         <div>
                             <span className="uppercase tracking-widest text-xs font-semibold border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 rounded-full px-4 py-1.5 inline-block mb-4 shadow-sm">
@@ -72,86 +65,34 @@ const ContactSection = () => {
                                 </span>
                             </h1>
                         </div>
-=======
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-                    {/* Left Side: Form */}
-                    <div data-aos='fade-right'>
-                        <form className="space-y-6" onSubmit={handleSubmit}>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    placeholder="Name"
-                                    required
-                                    className="w-full bg-transparent border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 hover:border-cyan-500 transition-all"
-                                />
-                                <input
-                                    type="text"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    placeholder="Phone"
-                                    className="w-full bg-transparent border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 hover:border-cyan-500 transition-all"
-                                />
-                            </div>
-                            <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                placeholder="Email"
-                                required
-                                className="w-full bg-transparent border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 hover:border-cyan-500 transition-all"
-                            />
-                            <textarea
-                                name="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                placeholder="Message"
-                                rows={6}
-                                required
-                                className="w-full bg-transparent border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 hover:border-cyan-500 transition-all resize-none"
-                            ></textarea>
-
-                            {status === 'success' && (
-                                <p className="text-green-400 text-sm">Message sent successfully!</p>
-                            )}
-                            {status === 'error' && (
-                                <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>
-                            )}
-
-                            <button
-                                type="submit"
-                                disabled={status === 'sending'}
-                                className="w-full bg-cyan-600 text-white px-6 py-4 rounded-lg font-bold hover:bg-cyan-500 transition-colors duration-300 shadow-lg shadow-cyan-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
-                            >
-                                {status === 'sending' ? 'Sending...' : 'Send Message'}
-                            </button>
-                        </form>
->>>>>>> 49cca9e84af472051fed12f49dd26fe3b88f9c43
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 relative z-10">
                         {/* Left Side: Form */}
                         <div data-aos='fade-right' className="lg:col-span-7">
-                            <form className="space-y-6">
+                            <form className="space-y-6" onSubmit={handleSubmit}>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div>
                                         <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Name</label>
                                         <input
                                             type="text"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
                                             placeholder="Your Name"
-                                            className="w-full bg-gray-900/70 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
+                                            required
+                                            className="w-full bg-gray-900/70 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 hover:border-cyan-500/50 transition-all duration-300"
                                         />
                                     </div>
                                     <div>
                                         <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Phone</label>
                                         <input
                                             type="text"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
                                             placeholder="Phone Number"
-                                            className="w-full bg-gray-900/70 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
+                                            className="w-full bg-gray-900/70 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 hover:border-cyan-500/50 transition-all duration-300"
                                         />
                                     </div>
                                 </div>
@@ -160,25 +101,45 @@ const ContactSection = () => {
                                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Email</label>
                                     <input
                                         type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
                                         placeholder="your@email.com"
-                                        className="w-full bg-gray-900/70 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
+                                        required
+                                        className="w-full bg-gray-900/70 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 hover:border-cyan-500/50 transition-all duration-300"
                                     />
                                 </div>
 
                                 <div>
                                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Message</label>
                                     <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
                                         placeholder="Tell me about your project..."
                                         rows={4}
-                                        className="w-full bg-gray-900/70 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300 resize-none"
+                                        required
+                                        className="w-full bg-gray-900/70 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 hover:border-cyan-500/50 transition-all duration-300 resize-none"
                                     ></textarea>
                                 </div>
 
+                                {status === 'success' && (
+                                    <p className="text-green-400 text-sm font-medium bg-green-500/10 border border-green-500/20 px-4 py-3 rounded-xl">
+                                        Message sent successfully!
+                                    </p>
+                                )}
+                                {status === 'error' && (
+                                    <p className="text-red-400 text-sm font-medium bg-red-500/10 border border-red-500/20 px-4 py-3 rounded-xl">
+                                        Something went wrong. Please try again.
+                                    </p>
+                                )}
+
                                 <button
                                     type="submit"
-                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wider shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/35 transition-all duration-300 group cursor-pointer"
+                                    disabled={status === 'sending'}
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wider shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/35 transition-all duration-300 group cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    <span>Send Message</span>
+                                    <span>{status === 'sending' ? 'Sending...' : 'Send Message'}</span>
                                     <FaPaperPlane className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                                 </button>
                             </form>

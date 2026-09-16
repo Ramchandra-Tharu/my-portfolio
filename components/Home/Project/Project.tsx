@@ -33,7 +33,7 @@ const ProjectSection = () => {
 
             <div className="mt-6 flex flex-wrap gap-3 w-full justify-start">
               {project.techStack.map((tech) => (
-                <span key={tech} className="bg-blue-900/40 text-cyan-300 text-xs md:text-sm px-3 py-1 rounded-full border border-blue-800">
+                <span key={tech} className="bg-cyan-500/10 text-cyan-400 text-xs md:text-sm px-3 py-1.5 rounded-full border border-cyan-500/30 font-medium shadow-sm">
                   {tech}
                 </span>
               ))}

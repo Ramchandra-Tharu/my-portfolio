@@ -10,10 +10,10 @@ type Props = {
 const ServiceCard = ({ icon, name, description }: Props) => {
     return (
         <div className='bg-gray-900 p-6 rounded-2xl border border-gray-800 h-full flex flex-col items-center text-center group
-            hover:border-blue-600 hover:bg-blue-900/10 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-cyan-500/20 cursor-pointer relative overflow-hidden'>
+            hover:border-cyan-500/50 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-cyan-500/20 cursor-pointer relative overflow-hidden'>
 
             {/* Background Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
             {/* Icon Container */}
             <div className="relative z-10 p-4 bg-gray-800 rounded-full mb-5 ring-1 ring-gray-700/50 group-hover:ring-cyan-500/50 transition-all duration-300 group-hover:bg-cyan-500/10">
