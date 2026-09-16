@@ -14,7 +14,7 @@ const Nav = ({ openNav }: Props) => {
   return (
     <>
       {/* Top Bar: Logo & Action Button */}
-      <div className="fixed top-8 left-0 w-full z-[1000] px-6 md:px-12 flex justify-between items-center pointer-events-none">
+      <div className="fixed top-3 sm:top-5 md:top-6 left-0 w-full z-[1000] px-4 sm:px-6 md:px-12 flex justify-between items-center pointer-events-none">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2 group cursor-pointer pointer-events-auto">
           <div className="w-10 h-10 rounded-full border-2 border-[#D0FF71] overflow-hidden relative group-hover:border-white transition-colors">
@@ -44,7 +44,7 @@ const Nav = ({ openNav }: Props) => {
             type="button"
             onClick={openNav}
             aria-label="Open menu"
-            className="lg:hidden w-11 h-11 flex items-center justify-center rounded-full bg-gray-900/80 border border-gray-800 text-white hover:text-cyan-400 hover:border-cyan-400/50 active:scale-95 transition-all duration-200 cursor-pointer"
+            className="lg:hidden w-11 h-11 flex items-center justify-center rounded-full bg-gray-900/80 border border-gray-800 text-white hover:text-[#D0FF71] hover:border-[#D0FF71]/50 active:scale-95 transition-all duration-200 cursor-pointer"
           >
             <HiBars3BottomRight className="w-6 h-6" />
           </button>
